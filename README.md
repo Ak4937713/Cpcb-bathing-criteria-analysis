@@ -9,7 +9,7 @@ The project includes:
 * ✔ Cleaned dataset
 * ✔ Environmental scoring model (CPCB-based)
 * ✔ Power BI dashboard
-* ✔ Methodology & insights
+* ✔ Methodology
 * ✔ Reproducible logic for other states/countries
 
 ---
