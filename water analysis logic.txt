@@ -1,0 +1,104 @@
+===============================
+CPCB BATHING WATER QUALITY - SCORING LOGIC
+===============================
+
+Source: Central Pollution Control Board (CPCB)
+Government of India
+Bathing Water Quality Standards (Latest Criteria)
+
+Four parameters are used for scoring:
+1. Dissolved Oxygen (DO)
+2. Biochemical Oxygen Demand (BOD)
+3. Fecal Coliform (FC)
+4. pH
+
+--------------------------------
+CPCB STANDARD THRESHOLDS
+--------------------------------
+• DO ≥ 5 mg/L           → PASS
+• BOD ≤ 3 mg/L          → PASS
+• Fecal Coliform ≤ 2500 MPN/100ml  → PASS
+• pH between 6.5 – 8.5  → PASS
+
+If a parameter meets the standard → Score = 1  
+If it fails the standard → Score = 0
+
+--------------------------------
+PARAMETERWISE SCORING LOGIC
+--------------------------------
+
+1) DO_score:
+   If DO ≥ 5 mg/L → 1
+   Else → 0
+
+2) BOD_score:
+   If BOD ≤ 3 mg/L → 1
+   Else → 0
+
+3) FC_score:
+   If Fecal Coliform ≤ 2500 MPN/100ml → 1
+   Else → 0
+
+4) pH_score:
+   If pH is between 6.5 and 8.5 → 1
+   Else → 0
+
+--------------------------------
+TOTAL SCORE (0–4 SYSTEM)
+--------------------------------
+total_score = DO_score + BOD_score + FC_score + pH_score
+
+Score interpretation:
+4 = Excellent
+3 = Good
+2 = Marginal
+1 = Poor
+0 = Very Poor
+
+--------------------------------
+FINAL BATHING SUITABILITY
+--------------------------------
+If total_score = 4:
+      "Suitable for Bathing"
+Else:
+      "Not Suitable for Bathing"
+
+--------------------------------
+DAX FORMULAS (for Power BI)
+--------------------------------
+
+DO_score =
+IF(BCD[DO_criteria] = "pass", 1, 0)
+
+BOD_score =
+IF(BCD[BOD_criteria] = "pass", 1, 0)
+
+FC_score =
+IF(BCD[FC_criteria] = "pass", 1, 0)
+
+pH_score =
+IF(BCD[Ph_criteria] = "pass", 1, 0)
+
+total_score =
+[DO_score] + [BOD_score] + [FC_score] + [pH_score]
+
+cpcb_criteria =
+SWITCH(
+    TRUE(),
+    [total_score] = 4, "Excellent",
+    [total_score] = 3, "Good",
+    [total_score] = 2, "Marginal",
+    [total_score] = 1, "Poor",
+    "Very Poor"
+)
+
+Final_Suitability =
+IF([total_score] = 4, "Suitable", "Not Suitable")
+
+--------------------------------
+NOTES
+--------------------------------
+• This scoring follows CPCB Bathing Water Quality Standards.
+• Suitable for bathing only when ALL four parameters pass.
+• Applicable for lakes, rivers, tanks, ponds, and all monitored water bodies.
+• Use min–max dataset by treating values against CPCB standards.
