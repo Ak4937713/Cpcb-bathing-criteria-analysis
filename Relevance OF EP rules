@@ -1,5 +1,4 @@
-**Environmental Protection Rules (EP Rules 1986) – README Section**
-About the EP Rules (Environmental Protection Rules, 1986)
+
 The Government of India notified the Environmental Protection Rules, 1986 under the Environment Protection Act, 1986.
 These rules empower the Central Government (and CPCB) to:
 •	Set environmental quality standards
@@ -7,9 +6,9 @@ These rules empower the Central Government (and CPCB) to:
 •	Define procedures for sampling & monitoring
 •	Specify industrial discharge norms
 •	Enforce penalties for environmental non-compliance
+
 These rules form the legal backbone for all national water quality standards, including surface water, drinking water, and bathing water criteria.
- EP Rules & Water Quality Standards
-Under the EP Rules, the Central Government (via CPCB) prescribes water quality norms for:
+EP Rules & Water Quality Standards Under the EP Rules, the Central Government (via CPCB) prescribes water quality norms for:
 •	Rivers
 •	Lakes
 •	Surface water bodies
@@ -17,13 +16,14 @@ Under the EP Rules, the Central Government (via CPCB) prescribes water quality n
 •	Bathing water quality criteria
 The Bathing Water Quality Standards used in this project are officially defined under the EP Rules framework.
 
- Bathing Water Criteria as per EP Rules + CPCB
-These limits are aligned with EP Rules for the protection of human health and water ecology.
+Bathing Water Criteria as per EP Rules + CPCB. These limits are aligned with EP Rules for the protection of human health and water ecology.
+
 Parameter	Standard
-Dissolved Oxygen (DO)	≥ 5 mg/L
-Biochemical Oxygen Demand (BOD)	≤ 3 mg/L
-Fecal Coliform (FC)	≤ 2500 MPN/100 ml
-pH	6.5 – 8.5
+* Dissolved Oxygen (DO)	≥ 5 mg/L
+* Biochemical Oxygen Demand (BOD)	≤ 3 mg/L
+* Fecal Coliform (FC)	≤ 2500 MPN/100 ml
+* pH	6.5 – 8.5
+
 These thresholds come directly from CPCB norms formulated under the EP Rules.
 
 Why EP Rules Matter for This Project?
