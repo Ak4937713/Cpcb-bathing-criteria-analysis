@@ -184,5 +184,3 @@ If you want help with:
 * Power BI dashboards
 * Water quality scoring models
 * Data cleaning automation
-
-Bas batao — main turant add kar dunga!
